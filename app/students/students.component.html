@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, tr, th, td{
+            border:1px solid black;
+            border-collapse: collapse;
+             padding-top: 30px;
+            padding-bottom: 30px;
+             text-align: center;
+        }
+        th{
+            background-color: antiquewhite;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .titleDiv{
+            background-color: antiquewhite;
+            color: chocolate;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+            margin-bottom: 10%;
+        }
+    </style>
+</head>
+<body>
+  <div class="titleDiv">
+    <h1>Student Marks</h1>
+  </div>
+    <table style="width: 100%; ">
+        <tr >
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mark</th>
+            <th>Result</th>
+        </tr>
+        <tr *ngFor = "let item of studentMarks">
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td [ngClass]="{ primary: item.mark <= 50, secondary: item.mark > 50 }">{{item.mark}}</td>
+           <td>
+            <span *ngIf="isPass(item.mark)" class="primarybg">Pass</span>
+            <span *ngIf="!isPass(item.mark)" class="secondarybg">Fail</span>
+           </td>
+        </tr>
+       
+    </table>
+</body>
+</html>

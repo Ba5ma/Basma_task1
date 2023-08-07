@@ -1,0 +1,16 @@
+
+ 
+.primary {
+  color: red;
+}
+.secondary {
+  color: green;
+}
+
+.primarybg{
+    background-color: rgb(74, 250, 74);
+}
+
+.secondarybg {
+  background-color: rgb(255, 0, 0);
+  }

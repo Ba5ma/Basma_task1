@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(/src/assets/istockphoto-948623158-612x612.jpg);
+            background-color: red;
+                }
+        div{
+            position: absolute;
+            padding-top: 50px;
+    padding-top: 20%;
+    width: 100%;
+    height:100%;
+   
+    text-align: center;
+    background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        
+        <input [(ngModel)]="userName" placeholder="Enter your name"><br><br>
+        <span>{{text}}</span>
+        <h2>{{userName}}</h2>
+        <button (click)="goToStudentsPage()">Go to Student Mark</button>
+       
+    </div>
+
+</body>
+</html>
+
+
